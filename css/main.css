@@ -1,0 +1,316 @@
+/*Style file created by patrick madura
+======================================
+00: CSS variables
+01: Color
+02: Typography
+
+*/
+
+/* 00: CSS variables */
+:root{
+    --page-color: hsla(170, 82%, 63%, 0.9);
+    --body-color: hsla(251, 91%, 54%, 0.9);
+    --sidebar-color: hsla(300, 91%, 79%, 0.5);
+    --footbar-color: hsla(150, 50%, 60%, 1);
+    --tab-color: hsla(7, 79%, 50%, 0.9);
+    --footbar-heigth: 15vh;
+    --page-position: 80%;
+    --page-width: 30%;
+    --tab-gap: 2vw;
+    --tab-width: 10vw;
+    --tab-height: 5vh;
+
+}
+/* 01: Color */
+/*html{
+    background-color: hsla(145, 35%, 89%, 0.9);
+    padding: 5%;
+    
+}*/
+
+body{
+/*    background-color: hsla(191, 87%, 70%, 0.5);
+    color: hsla(180, 100%, 100%, 0.9);*/
+
+    background-color: var(--body-color);
+    padding: 5px;
+}
+
+aside.sidebar{
+    background-color: var(--sidebar-color);
+}
+
+#zen-intro{
+    background-color: var(--page-color);
+}
+
+#zen-supporting{
+    background-color: var(--page-color);
+}
+
+/* 02: Typography */
+@font-face {
+    font-family: 'myfont';
+    src: url(../fonts/chunkfive.woff);
+    
+}
+
+header h1{
+    font-family: 'myfont', sans-serif;
+    font-weight: 400;
+    font-size: 1.25em;
+    letter-spacing: 1px;
+    line-height: 1em;
+}
+h3{
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.25em;
+    text-align: center;
+
+}
+a{
+    text-decoration: none;
+    text-transform: uppercase;
+
+}
+
+/* 03: Layout */
+/* for testing */
+
+div.explanation, div.requirements, div.benefits, div.participation{
+    position: fixed;
+    top: var(--page-position);
+    width: var(--page-width);
+    height: 80%;
+    padding-left: 10px;
+    margin:10px;
+    border: 1px solid black;
+    background-image: url(../img/newspaper3.jpg);
+    transition: all 4s ease-in-out;
+}
+div.explanation{
+    left: 0%;
+}
+div.requirements{
+    left: 12vw;
+}
+div.benefits{
+    left: 24vw;
+}
+div.participation{
+    left: 36vw;
+}
+
+div.explanation h3, div.requirements h3, div.benefits h3, div.participation h3{
+    margin-top: -10%;
+    width: var(--tab-width);
+    height: var(--tab-height);
+    background-color: var(--tab-color);
+    border-top-left-radius: 120px 135px;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 20px 10px;
+    text-align:center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+aside.sidebar{
+    position: absolute;
+    top: 20%;
+    right: 0;
+    width: 20%;
+    height: 100%;
+}
+
+div.extra2{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: var(--footbar-heigth);
+    background-color: var(--footbar-color);
+}
+
+footer{
+    position: fixed;
+    bottom: 0;
+    left: 40%;
+    width: 20%;
+    text-align: center;
+    background-color: var(--footbar-color);
+    border: 1px solid var(--footbar-color);
+    z-index: 3;
+}
+/* introduction - in the middle */
+section.intro{
+    position: fixed;
+    bottom: 5%;
+    left: 30%;
+    width: 30%;
+    height: 80%;
+    padding: 2%;
+    background-image: url(../img/newspaper3.jpg);
+    transform: rotate(-20deg) translate(-100px,0);
+}
+
+div.extra1{
+    position: fixed;
+    bottom: 5%;
+    left: 35%;
+    width: 30%;
+    height: 80%;
+    padding: 2%;
+    background-image: url(../img/newspaper1.jpg);
+    z-index: -1;
+}
+
+div{
+    background-color:  hsla(200,50%,70%,0.3);
+  }
+  
+  .wrapper {
+    background-color: white;
+    display: grid;
+    grid-template-columns: 100px  repeat(2, 1fr) 100px;
+    grid-gap: 20px;
+    grid-auto-rows: minmax(100px, auto);
+  }
+  
+  .one{
+    grid-column: 2/4;
+    grid-row: 2/4;
+  }
+  
+  .two{
+    grid-column: 1/ 4;
+    grid-row: 1/2;
+  }
+  
+  .three{
+    grid-column: 1/2;
+    grid-row: 2/4;
+  }
+  
+  .four{
+    grid-column: 4/5;
+    grid-row: 1/3;
+  }
+  
+  .five{
+    grid-column: 1/4;
+    grid-row: 4/5;
+  }
+  
+  .six{
+    grid-column: 3/5;
+    grid-row: 3/5;
+  }
+  
+  
+/* 04: other decorations */
+
+div.explanation:active{
+    top: 15vh;
+}
+
+div.requirements:active{
+    top: 15vh;
+}
+
+div.benefits:active{
+    top: 15vh;
+}
+
+div.participation:active{
+    top: 15vh;
+}
+h3:hover{
+    background-color: var(--footbar-color);
+}
+
+a:hover{
+    font-size: 1.2em;
+    text-indent: -100px;
+}
+
+p::first-letter{
+    font-size: 2em;
+    font-style: italic;
+}
+
+
+
+/*p:nth-child(2n){
+    background-color: ;
+}
+
+p:nth-child(2n+1){
+    background-color: ;
+}    
+*/
+
+h3{
+    color: rgb(20, 223, 226);
+}
+
+h3.a{
+    color: rgb(2, 72, 91);
+    text-shadow: rgb(223, 28, 227) 0.2em 0.2em 0.4em;
+}
+
+/* 05: more practice on transition */
+section.intro h3 ~p{
+    opacity: 1;
+    transition: all 3s ease-in-out;
+}
+
+section.intro h3:hover ~p{
+    opacity: 0;
+    transform: rotate(360deg) scale(0.2);
+}
+
+/* 06: animation */
+footer{
+    animation: 10s ease-in-out 2s alternate infinite moveback;
+}
+
+@keyframes moveback{
+    from{transform: translate(-500px,0px);}
+    30%{transform: translate(-300px,0px);}
+    50%{transform: translate(0px,0px);}
+    70%{transform: translate(300px,0px);}
+    90%{transform: translate(500px,0px);}
+
+}
+
+h2{
+    background-image: linear-gradient(blue, white);
+    animation: 4s infinite running changecolor;
+}
+
+@keyframes changecolor{
+    from{background-image: linear-gradient(white, blue)};
+    to{background-image: linear-gradient(blue,white);}
+}
+
+/* 07: fancy feature */
+/* border image */
+div.extra1{
+    border-image: linear-gradient(white,red) 10 / 15px round;
+}
+
+aside.sidebar{
+    font-size: 0.8em;
+    clip-path: polygon(0 0, 0 70%, 50% 100%, 100% 70%, 100% 0);
+}
+
+div#design-archives{
+    display: none;
+}
+aside.sidebar h3{
+    display: none;
+}
+aside.sidebar ul li{
+    list-style: none;
+}
